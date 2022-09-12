@@ -1,0 +1,30 @@
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 15rem;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 1300px) {
+  .main {
+    margin: 5rem 5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    margin: 5rem 0;
+  }
+}
