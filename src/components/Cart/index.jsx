@@ -21,9 +21,9 @@ const Cart = () => {
         </div>
       ) : (
         <div style={{ width: "80%" }}>
-          <h2 style={{ color: "white", margin: "2rem" }}>CART</h2>
+          <h2 style={{ color: "white", margin: "6rem 2rem" }}>CART</h2>
           {products.map((item) => (
-            <div className={classes.container}>
+            <div className={classes.container} key={item.id * Math.random()}>
               <img src={item.image} alt="image" />
               <p className={classes.des}>{item.description.slice(0, 100)}</p>
               <p>${item.price}</p>

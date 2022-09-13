@@ -15,12 +15,11 @@ const Card = (props) => {
     <>
       <div className={classes.container}>
         <img src={image} />
-        <p className={classes.des}>{description.slice(0, 100)}</p>
+        <p className={classes.des}>{description.slice(0, 60)}</p>
         <p>${price}</p>
         <p>
           Ratings: {rating.rate}/{rating.count}
         </p>
-        {/* <p>{rating}</p> */}
         <button className={classes.btn} onClick={() => addToCart(product)}>
           ADD TO CART
         </button>
