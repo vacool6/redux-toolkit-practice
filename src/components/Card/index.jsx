@@ -14,7 +14,7 @@ const Card = (props) => {
   return (
     <>
       <div className={classes.container}>
-        <img src={image} />
+        <img src={image} alt="pic" />
         <p className={classes.des}>{description.slice(0, 60)}</p>
         <p>${price}</p>
         <p>
