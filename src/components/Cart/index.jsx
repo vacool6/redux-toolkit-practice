@@ -10,6 +10,7 @@ const Cart = () => {
     // console.log(item);
     dispatch(remove(item));
   };
+
   return (
     <>
       {products.length === 0 ? (
@@ -20,11 +21,11 @@ const Cart = () => {
           />
         </div>
       ) : (
-        <div style={{ width: "80%" }}>
-          <h2 style={{ color: "white", margin: "6rem 2rem" }}>CART</h2>
+        <div style={{ width: "80%", margin: "5rem 0" }}>
+          <h2 style={{ color: "white", margin: "6rem 5rem" }}>CART</h2>
           {products.map((item) => (
             <div className={classes.container} key={item.id * Math.random()}>
-              <img src={item.image} alt="image" />
+              <img src={item.image} alt="item" />
               <p className={classes.des}>{item.description.slice(0, 100)}</p>
               <p>${item.price}</p>
 

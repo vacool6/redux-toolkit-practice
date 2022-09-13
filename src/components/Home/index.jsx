@@ -1,22 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Card from "../Card";
 import classes from "../Home/style.module.css";
+import Pagination from "../Pagination";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../../slices/productSlice";
+import { usePaginate } from "../Context/PaginateContext";
 
 const Home = () => {
-  // const [data, setData] = useState([]);
+  const { itemsPerPage, lastItemIndex, firstItemIndex } = usePaginate();
   const data = useSelector((state) => state.product.data);
   const status = useSelector((st) => st.product.status);
   // console.log(status);
   const dispatch = useDispatch();
+  const currentItems = data.slice(firstItemIndex, lastItemIndex);
+
   useEffect(() => {
     // fetch("https://fakestoreapi.com/products")
     //   .then((res) => res.json())
     //   .then((json) => setData(json));
 
     dispatch(fetchProducts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
@@ -29,10 +33,10 @@ const Home = () => {
         </div>
       ) : (
         <>
-          <h2 style={{ color: "white", margin: "6rem 2rem" }}>PRODUCTS</h2>
+          <h2 style={{ color: "white", margin: "6rem 5rem" }}>PRODUCTS</h2>
           <div className={classes.main}>
             <div className={classes.container}>
-              {data.map((items) => (
+              {currentItems.map((items) => (
                 <Card
                   key={items.id}
                   price={items.price}
@@ -43,6 +47,7 @@ const Home = () => {
                 />
               ))}
             </div>
+            <Pagination itemsPerPage={itemsPerPage} totalItems={data.length} />
           </div>
         </>
       )}
