@@ -3,8 +3,8 @@ import { usePaginate } from "../Context/PaginateContext";
 import classes from "./style.module.css";
 
 const Pagination = (props) => {
-  const { paginate } = usePaginate();
-  const { itemsPerPage, totalItems } = props;
+  const { paginate, itemsPerPage } = usePaginate();
+  const { totalItems } = props;
   const pageNum = [];
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     pageNum.push(i);

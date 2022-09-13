@@ -5,8 +5,8 @@ export const PaginateContext = createContext({});
 export const usePaginate = () => useContext(PaginateContext);
 
 const PaginateProvider = ({ children }) => {
-  const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
+  const [currentPage, setCurrentPage] = useState(1);
   const lastItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
 

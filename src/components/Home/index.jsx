@@ -7,7 +7,7 @@ import { fetchProducts } from "../../slices/productSlice";
 import { usePaginate } from "../Context/PaginateContext";
 
 const Home = () => {
-  const { itemsPerPage, lastItemIndex, firstItemIndex } = usePaginate();
+  const { lastItemIndex, firstItemIndex } = usePaginate();
   const data = useSelector((state) => state.product.data);
   const status = useSelector((st) => st.product.status);
   // console.log(status);
@@ -47,7 +47,7 @@ const Home = () => {
                 />
               ))}
             </div>
-            <Pagination itemsPerPage={itemsPerPage} totalItems={data.length} />
+            <Pagination totalItems={data.length} />
           </div>
         </>
       )}
