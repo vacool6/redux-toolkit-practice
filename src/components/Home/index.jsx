@@ -10,15 +10,10 @@ const Home = () => {
   const { lastItemIndex, firstItemIndex } = usePaginate();
   const data = useSelector((state) => state.product.data);
   const status = useSelector((st) => st.product.status);
-  // console.log(status);
   const dispatch = useDispatch();
   const currentItems = data.slice(firstItemIndex, lastItemIndex);
 
   useEffect(() => {
-    // fetch("https://fakestoreapi.com/products")
-    //   .then((res) => res.json())
-    //   .then((json) => setData(json));
-
     dispatch(fetchProducts());
   }, [dispatch]);
 

@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import classes from "../View/style.module.css";
+import Slider from "../Slider";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { fetchProducts } from "../../slices/productSlice";
 import { add } from "../../slices/cartSlice";
 
 const View = () => {
   const [product, setProduct] = useState();
+  const [relatedProduct, setRelatedProduct] = useState();
   const param = useParams();
   const data = useSelector((state) => state.product.data);
   const status = useSelector((st) => st.product.status);
   const dispatch = useDispatch();
-  const history = useHistory();
 
   const addToCart = (item) => {
     dispatch(add(item));
     window.alert("Item added to cart!");
-    history.push("/");
   };
 
   useEffect(() => {
@@ -28,6 +28,16 @@ const View = () => {
       setProduct(data.filter((item) => String(item.id) === param.id));
     }
   }, [data, param.id]);
+
+  useEffect(() => {
+    if (product !== undefined && product.length > 0) {
+      setRelatedProduct(
+        data.filter((item) => String(item.category) === product[0].category)
+      );
+    }
+  }, [product, data]);
+
+  console.log(relatedProduct);
 
   return (
     <>
@@ -63,6 +73,7 @@ const View = () => {
                 </div>
               </div>
             </div>
+            <Slider relatedProduct={relatedProduct} />
           </>
         ) : (
           <div className={classes.loading}>
