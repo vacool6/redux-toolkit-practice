@@ -17,6 +17,130 @@ export const fetchProducts = () => {
       dispatch(setProducts(result));
       dispatch(setStatus(STATUS.IDLE));
     } catch (err) {
+      dispatch(
+        setProducts([
+          {
+            id: 1,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+          {
+            id: 2,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+          {
+            id: 3,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+          {
+            id: 4,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+          {
+            id: 5,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+          {
+            id: 6,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+          {
+            id: 7,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+          {
+            id: 8,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+          {
+            id: 9,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+          {
+            id: 10,
+            price: "20.2",
+            image:
+              "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/common_22ss/img/products/contentsArea_itemimg_16.jpg",
+            description:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.Those restaurants’ profiles on Goldbelly are then linked to in the description box of the video and Thrillist makes a commission off of any transactions.",
+            category: "Mens clothing",
+            rating: { rate: "3.4", count: "75" },
+            title:
+              "Those restaurants’ profiles on Goldbelly are then linked to in the description.",
+          },
+        ])
+      );
       dispatch(setStatus(STATUS.ERROR));
     }
   };

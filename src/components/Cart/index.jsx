@@ -7,9 +7,10 @@ const Cart = () => {
   const products = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const removeItem = (item) => {
-    // console.log(item);
     dispatch(remove(item));
   };
+
+  console.log(products);
 
   return (
     <>
