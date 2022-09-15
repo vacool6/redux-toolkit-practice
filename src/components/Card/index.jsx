@@ -1,16 +1,10 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import classes from "../Card/style.module.css";
-import { useDispatch } from "react-redux";
-import { add } from "../../slices/cartSlice";
 
 const Card = (props) => {
-  const dispatch = useDispatch();
   const { price, rating, image, description, product } = props;
-
-  const addToCart = (item) => {
-    // console.log(item);
-    dispatch(add(item));
-  };
+  const history = useHistory();
   return (
     <>
       <div className={classes.container}>
@@ -20,8 +14,11 @@ const Card = (props) => {
         <p>
           Ratings: {rating.rate}/{rating.count}
         </p>
-        <button className={classes.btn} onClick={() => addToCart(product)}>
-          ADD TO CART
+        <button
+          className={classes.btn}
+          onClick={() => history.push(`/info/${product.id}`)}
+        >
+          MORE INFO
         </button>
       </div>
     </>

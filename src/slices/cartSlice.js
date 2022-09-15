@@ -6,8 +6,8 @@ const cartSlice = createSlice({
   reducers: {
     add(state, action) {
       //We should not directly mutate state instead return,
-      return [...state, action.payload];
-      // state.push(action.payload);
+      // return [...state, action.payload];
+      state.push(action.payload);
       //This  seems like directly mutating state but it returns new state under the hood.
     },
     remove(state, action) {
