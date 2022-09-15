@@ -10,8 +10,6 @@ const Cart = () => {
     dispatch(remove(item));
   };
 
-  console.log(products);
-
   return (
     <>
       {products.length === 0 ? (

@@ -37,8 +37,6 @@ const View = () => {
     }
   }, [product, data]);
 
-  console.log(relatedProduct);
-
   return (
     <>
       {product !== undefined ? (

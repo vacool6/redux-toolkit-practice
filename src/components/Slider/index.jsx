@@ -3,7 +3,6 @@ import classes from "../Slider/style.module.css";
 import Card from "../Card";
 const Slider = (props) => {
   const { relatedProduct } = props;
-  console.log(relatedProduct);
   return (
     <>
       <div>
