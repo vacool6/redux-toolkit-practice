@@ -1,7 +1,9 @@
 # Redux-toolkit
 
 In this peoject we have created an E-commerce app and the primary focus is in Redux-toolkit.
-Features like add item, remove item from cart and more with the help of toolkit. 
+Features like add item, remove item from cart and more with the help of toolkit.
+
+Basic setup. 
 
 
 ## Getting started
